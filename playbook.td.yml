@@ -1,0 +1,14 @@
+- hosts: remote
+  gather_facts: false 
+  vars_prompt:
+    - name: test.txt
+      prompt: Quels packages voulez vous installer ?
+      private: no
+  
+  tasks:
+    - name: install packages 
+      package: 
+        name: "{{ package }}" 
+        state: present
+      
+
