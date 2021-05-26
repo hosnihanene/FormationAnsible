@@ -4,13 +4,14 @@
     fichier: test.txt
     destination: /home/ansible_user/test5.txt
   tasks:
-          - name: test ping
-            ping:
+    - name: test ping
+      ping:
 
-          - name: copy file to remote server
-            copy:
-                    src: "{{ fichier }}"
-                    dest: "{{ destination }}"
+    - name: copy file to remote server
+      copy:
+        src: "{{ fichier }}"
+        dest: "{{ destination }}"
+
 #ajout d'un commentaire
 
 

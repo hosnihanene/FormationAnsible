@@ -1,0 +1,27 @@
+- hosts: remote
+  gather_facts: false 
+          - name: fichier
+            prompt: Fichier a copier?
+            private: no
+
+          - name: destination
+            prompt: Fichier de destination?
+            private: no
+
+  tasks:
+          - name: test ping
+            ping:
+
+          - name: copy file to remote server
+            copy:
+                    src: "{{ fichier }}"
+                    dest: "{{ destination }}"  
+#ansible -m ping remote
+#ansible -m copy -a 'src=test.txt dest=/home/ansible_user/test.txt'
+#ansible-playbook playbook.yml
+
+
+
+
+
+
