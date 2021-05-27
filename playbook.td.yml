@@ -1,5 +1,7 @@
 - hosts: remote
-  gather_facts: false 
+  gather_facts: no
+  remote_user: root
+
   vars_prompt:
     - name: packages
       prompt: Quels packages voulez vous installer ?
@@ -11,8 +13,9 @@
     
     - name: install packages 
       package: 
-        name: "{{ package_list }}" 
+        name: "{{ packages_list }}" 
         state: present
-
+      become: true
+      become_user: root      
           
 

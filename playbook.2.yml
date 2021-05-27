@@ -1,0 +1,14 @@
+- hosts: remote
+  tasks:
+          - name: test ping
+            ping:
+          
+          - name: copy file to remote server
+            copy:
+                    src: "{{ fichier }}"
+                    dest: "{{ destination }}"
+
+#ansible -m ping remote
+#ansible -m copy -a 'src=test.txt dest=/home/ansible_user/test.txt'
+
+#ansible-playbook playbook.yml
