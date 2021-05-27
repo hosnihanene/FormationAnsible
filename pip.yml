@@ -1,0 +1,10 @@
+ # Création d'un IP Public
+- name: Create a public ip address
+  azure_rm_publicipaddress:
+    resource_group: "{{ myResourceGroup }}"
+    name: "{{ my_public_ip }}"
+    allocation_method: static
+    register: output_ip_address #affecte l'IP dans la variable {{ output_ip_adresse }}
+- name: Output public IP
+    debug:
+    msg: "The public IP is {{ output_ip_address.state.ip_address }}"

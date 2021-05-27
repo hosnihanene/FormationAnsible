@@ -1,0 +1,11 @@
+- name: Create a network interface
+    azure_rm_networkinterface:
+    name: "{{ myNetworkInterface }}"
+    resource_group: "{{ myResourceGroup }}"
+    virtual_network: "{{ myVirtualNetwork }}"
+    subnet_name: "{{ mySubnet }}"
+    security_group: "{{ mySecurityGroup }}"
+    ip_configurations:
+        - name: default
+        public_ip_address_name: "{{ my_public_ip }}"
+        primary: True
