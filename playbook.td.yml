@@ -4,16 +4,15 @@
     - name: packages
       prompt: Quels packages voulez vous installer ?
       private: no
-'''  
+  
   tasks:
+    - set_fact:
+       packages_list: "{{ packages.split(',') }}"
+    
     - name: install packages 
       package: 
-        name: "{{ package }}" 
+        name: "{{ package_list }}" 
         state: present
-'''
 
-    - name: debug
-      debug:
-        msg:"{{ packages }}"
-      
+          
 
