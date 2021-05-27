@@ -1,0 +1,10 @@
+
+myResourceGroup: groupeTest
+rgLocation: 
+myVirtualNetwork:
+ipCidr:
+mySubnet:
+ipCidrSubnet:
+myPublicIp:
+mySecurityGroup:
+myNetworkInterface:

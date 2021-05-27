@@ -1,2 +1,16 @@
 ---
 # tasks file for pip
+# Création d'un IP Public
+- name: Create a public ip address
+  azure_rm_publicipaddress:
+    resource_group: "{{ myResourceGroup }}"
+    name: "{{ myPublicIp }}"
+    allocation_method: static
+  register: output_ip_address #affecte l'IP dans la variable {{ output_ip_adress }}
+
+- debug:
+    var: output_ip_adress
+
+- name: Output public IP
+  debug:
+    msg: "The public IP is {{ output_ip_address.state.ip_address }}"
