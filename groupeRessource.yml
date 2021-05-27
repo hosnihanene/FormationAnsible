@@ -2,5 +2,5 @@
   tasks:
     - name: Create resource group if doesn't exist
       azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
+        name: "{{ myResourceGroup }}"
         location: "{{ location }}"
