@@ -1,0 +1,14 @@
+# Création du VNET
+- name: Create a virtual network
+  azure_rm_virtualnetwork:
+    resource_group: "{{ myResourceGroup }}"
+    name: "{{ myVirtualNetwork }}"
+    address_prefixes_cidr:
+        - "{{ ip_cidr }}"
+    
+    #dns_servers:
+    #   - "127.0.0.2"
+    
+    #tags:
+    #    testing: testing
+    #    delete: on-exit

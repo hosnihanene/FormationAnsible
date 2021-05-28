@@ -1,6 +1,5 @@
 - hosts: remote
   gather_facts: no
-  remote_user: root
 
   vars_prompt:
     - name: packages
@@ -16,5 +15,10 @@
         name: "{{ packages_list }}" 
         state: present
       become: true
+<<<<<<< HEAD:playbook.td.yml
       ansible_become_password:     
+=======
+
+          
+>>>>>>> e11e7c6b6cf8f64c5664a649a5588f38040fb69e:exos/playbook.td.yml
 
