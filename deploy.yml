@@ -1,0 +1,10 @@
+- hosts: remote 
+  gather_facts: false
+  become: true
+  roles:
+    - rg
+    - vnet
+    - subnet
+    - pip
+    - nic
+    - nsg

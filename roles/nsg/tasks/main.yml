@@ -1,2 +1,13 @@
 ---
 # tasks file for nsg
+- name: Create Network Security Group
+  azure_rm_securitygroup:
+    resource_group: "{{ myResourceGroup }}"
+    name: "{{ mySecurityGroup }}"
+    rules:
+      - name: 'allow_ssh'
+        protocol: Tcp
+        destination_port_range: 22
+        access: Allow
+        priority: 1001
+        direction: Inbound

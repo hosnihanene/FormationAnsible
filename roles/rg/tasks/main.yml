@@ -4,4 +4,4 @@
 - name: Create resource group if doesn't exist
   azure_rm_resourcegroup:
     name: "{{ myResourceGroup }}"
-    location: "{{ rg_location }}"
+    location: "{{ rgLocation }}"

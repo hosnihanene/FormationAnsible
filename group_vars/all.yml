@@ -1,10 +1,10 @@
 
-myResourceGroup: groupeTest
-rgLocation: 
-myVirtualNetwork:
-ipCidr:
-mySubnet:
-ipCidrSubnet:
-myPublicIp:
-mySecurityGroup:
-myNetworkInterface:
+myResourceGroup: LeGroupeDeLAmbiance
+rgLocation: westeurope
+myVirtualNetwork: 
+ipCidr: 10.0.0.0/16
+mySubnet: SubnetDeLAmbiance
+ipCidrSubnet: 10.0.1.0/24
+myPublicIp: PipDeLAmbiance
+mySecurityGroup: GpDeLAmbiance
+myNetworkInterface: NetDeLAmbiance
