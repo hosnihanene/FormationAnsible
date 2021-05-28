@@ -1,12 +1,12 @@
 - name: Create Network Security Group
-    azure_rm_securitygroup:
+  azure_rm_securitygroup:
     resource_group: "{{ myResourceGroup }}"
     name: "{{ mySecurityGroup }}"
     rules:
-        - name: 'allow_rdp'
-          protocol: Tcp
-          destination_port_range: 3389
-          access: Allow
-          priority: 1001
-          direction: Inbound
+      - name: 'allow_ssh'
+        protocol: SSH
+        destination_port_range: 22
+        access: Allow
+        priority: 1001
+        direction: Inbound
         
